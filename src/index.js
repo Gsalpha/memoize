@@ -1,12 +1,12 @@
 const equal = (a, b) => Object.is(a, b)
-const memoize = fn => {
+const memoize = (fn, equalFunc = equal) => {
     let cacheValue = null
     let lastArgs = []
     return (...args) => {
         if (
             cacheValue &&
             args.length === lastArgs.length &&
-            args.every((arg, index) => equal(arg, lastArgs[index]))
+            args.every((arg, index) => equalFunc(arg, lastArgs[index]))
         ) {
             return cacheValue
         }
