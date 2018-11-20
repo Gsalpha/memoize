@@ -1,0 +1,12 @@
+{
+    "name": "memoize",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "dev": "parcel  examples/index.html"
+    },
+    "devDependencies": {
+        "typescript": "^3.1.6"
+    }
+}
