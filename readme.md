@@ -6,4 +6,9 @@
 
 ---
 
-采用浅比较对比参数匹配`Object.is`
+默认采用浅比较对比参数匹配`Object.is`；
+可自定义比较函数如值比较：
+
+```
+memoize(someFunction,customEqualFunction)
+```
