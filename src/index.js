@@ -5,6 +5,7 @@ const memoize = fn => {
     return (...args) => {
         if (
             cacheValue &&
+            args.length === lastArgs.length &&
             args.every((arg, index) => equal(arg, lastArgs[index]))
         ) {
             return cacheValue
